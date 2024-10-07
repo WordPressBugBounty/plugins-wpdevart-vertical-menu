@@ -1,0 +1,1 @@
+# plugins-wpdevart-vertical-menu
