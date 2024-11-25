@@ -3,8 +3,8 @@ Contributors: wpdevart
 Donate link: https://wpdevart.com/wordpress-vertical-menu-plugin/
 Tags: vertical menu, sidebar vertical menu, responsive vertical menu, sidebar menu, menu
 Requires at least: 3.4.0
-Tested up to: 6.6
-Stable tag: 1.6.0
+Tested up to: 6.7
+Stable tag: 1.6.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -58,6 +58,10 @@ You can upgrade the free version to [Vertical menu Pro](https://wpdevart.com/wor
 3.  Back-end  
 
 == Changelog ==
+
+= 1.6.1 =
+
+* New version.
 
 = 1.6.0 =
 
