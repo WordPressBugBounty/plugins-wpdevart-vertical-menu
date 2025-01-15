@@ -1,6 +1,3 @@
-.wpdevart_menu_ul *,.wpdevart_menu_ul{
-	
-}
 .wpdevart_menu_ul a{
 	outline : none;
 }
@@ -43,7 +40,7 @@
 }
 .wpdevart_menu_link_conteiner i{
 	position: absolute;
-	right: 0px;
+	right: 2px;
 	top: 50%;
 	transform: translateY(-50%);	
 }
@@ -66,7 +63,7 @@
 .wpdevart_menu_ul > li{	
 	background-color:#ffffff !important;
 }
-.wpdevart_menu_ul > li.current-menu-item,.wpdevart_menu_ul > li.current-menu-ancestor{;		
+.wpdevart_menu_ul > li.current-menu-item,.wpdevart_menu_ul > li.current-menu-ancestor{	
 	background-color:#ffffff !important;
 }
 .wpdevart_menu_ul > li:hover{

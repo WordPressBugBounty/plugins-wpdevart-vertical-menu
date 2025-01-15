@@ -3,13 +3,17 @@
 * Plugin Name: Wpdevart vertical menu
 * Plugin URI: https://wpdevart.com/wordpress-vertical-menu-plugin/
 * Description: WordPress Responsive Vertical menu plugin is an nice and simple plugin for showing your menu in widget. It's very simple to use and allow users to display menu icons.
-* Version: 1.6.1
+* Version: 1.6.2
 * Author: wpdevart
 * Author URI: https://wpdevart.com 
 * License: GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
 */
 
 class wpda_vertical_menu{
+	
+	public $databese;
+
+	public $admin_menu;
 	
 	function __construct(){			
 		$this->define_constants();
@@ -84,6 +88,7 @@ class wpda_vertical_menu{
 	public function install_databese(){
 		// new class for installing databese
 		$this->databese->install_theme_tabel();
+		$this->databese->install_default_theme();
 	}
 }
 $wpda_vertical_menu = new wpda_vertical_menu();
