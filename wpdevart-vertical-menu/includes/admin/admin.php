@@ -35,9 +35,8 @@ class wpda_vertical_menu_admin_panel {
 		add_action('admin_print_styles-' . $featured_themes, array($this, 'featured_themes_js_css'));
 		add_action('admin_print_styles-' . $hire_expert, array($this, 'create_hire_expert_page_style_js'));
 		add_action('admin_print_styles-nav-menus.php', array($this, 'nav_menu_script_styles'));	// include script and style for uploading image every menu item
-		if (isset($submenu['wpda_vertical_menu_themes']))
-			add_submenu_page("wpda_vertical_menu_themes", "Support or Any Ideas?", "<span style='color:#00ff66' >Support or Any Ideas?</span>", 'manage_options', "wpdevar_vert_menu_any_ideas", array($this, 'any_ideas'), 156);
-		if (isset($submenu['wpda_vertical_menu_themes'])) {
+		if (isset($submenu['wpda_vertical_menu_themes'])){
+			add_submenu_page("wpda_vertical_menu_themes", "Support or Any Ideas?", "<span style='color:#00ff66' >Support or Any Ideas?</span>", 'manage_options', "wpdevar_vert_menu_any_ideas", array($this, 'any_ideas'), 156);		
 			$count_pages = count($submenu['wpda_vertical_menu_themes']) - 1;
 			$submenu['wpda_vertical_menu_themes'][$count_pages][2] = wpda_vertical_menu_support_url;
 		}
@@ -68,15 +67,15 @@ class wpda_vertical_menu_admin_panel {
 	}
 
 	public function create_hire_expert_page_style_js() {
-		wp_enqueue_style('wpda_vertical_menu_theme_page_css', wpda_vertical_menu_plugin_url . 'includes/admin/css/hire_expert.css');
+		wp_enqueue_style('wpda_vertical_menu_hire_expert_css', wpda_vertical_menu_plugin_url . 'includes/admin/css/hire_expert.css');
 	}
 
 	public function featured_plugins_js_css() {
-		wp_enqueue_style('wpda_vertical_menu_theme_page_css', wpda_vertical_menu_plugin_url . 'includes/admin/css/featured_plugins_css.css');
+		wp_enqueue_style('wpda_vertical_menu_featured_plugins_css', wpda_vertical_menu_plugin_url . 'includes/admin/css/featured_plugins_css.css');
 	}
 
 	public function featured_themes_js_css() {
-		wp_enqueue_style('wpda_vertical_menu_theme_page_css', wpda_vertical_menu_plugin_url . 'includes/admin/css/featured_themes_css.css');
+		wp_enqueue_style('wpda_vertical_featured_themes_page_css', wpda_vertical_menu_plugin_url . 'includes/admin/css/featured_themes_css.css');
 	}
 
 	/*#################### Function for navigation menu styles ########################*/
