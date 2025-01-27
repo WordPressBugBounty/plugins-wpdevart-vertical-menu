@@ -25,7 +25,7 @@ class wpda_vertical_menu_admin_panel {
 		global $submenu;
 		/* conect admin pages to wordpress core*/
 		$main_page = add_menu_page("Vertical Menu", "Vertical Menu", 'manage_options', "wpda_vertical_menu_themes", array($this, 'create_theme_page'), 'dashicons-list-view');
-		$main_page = add_submenu_page("wpda_vertical_menu_themes", "Vertical Menu Theme", "Vertical Menu Theme", 'manage_options', "wpda_vertical_menu_themes", array($this, 'create_theme_page'));
+		add_submenu_page("wpda_vertical_menu_themes", "Vertical Menu Theme", "Vertical Menu Theme", 'manage_options', "wpda_vertical_menu_themes", array($this, 'create_theme_page'));
 		$featured_plugins = add_submenu_page("wpda_vertical_menu_themes", "Featured Plugins", "Featured Plugins", 'manage_options', "wpda_vertical_menu_featured_plugins", array($this, 'featured_plugins'));
 		$featured_themes = add_submenu_page("wpda_vertical_menu_themes", "Featured Themes", "Featured Themes", 'manage_options', "wpda_vertical_menu_featured_themes", array($this, 'featured_themes'));
 		$hire_expert = add_submenu_page("wpda_vertical_menu_themes", 'Hire an Expert', '<span style="color:#00ff66" >Hire an Expert</span>', 'manage_options', "wpda_vertical_menu_hire_expert", array($this, 'hire_expert'));
@@ -36,7 +36,7 @@ class wpda_vertical_menu_admin_panel {
 		add_action('admin_print_styles-' . $hire_expert, array($this, 'create_hire_expert_page_style_js'));
 		add_action('admin_print_styles-nav-menus.php', array($this, 'nav_menu_script_styles'));	// include script and style for uploading image every menu item
 		if (isset($submenu['wpda_vertical_menu_themes'])){
-			add_submenu_page("wpda_vertical_menu_themes", "Support or Any Ideas?", "<span style='color:#00ff66' >Support or Any Ideas?</span>", 'manage_options', "wpdevar_vert_menu_any_ideas", array($this, 'any_ideas'), 156);		
+			add_submenu_page("wpda_vertical_menu_themes", "Support or Any Ideas?", "<span style='color:#00ff66' >Support or Any Ideas?</span>", 'manage_options', "wpdevar_vertical_menu_any_ideas", array($this, 'any_ideas'), 156);		
 			$count_pages = count($submenu['wpda_vertical_menu_themes']) - 1;
 			$submenu['wpda_vertical_menu_themes'][$count_pages][2] = wpda_vertical_menu_support_url;
 		}
